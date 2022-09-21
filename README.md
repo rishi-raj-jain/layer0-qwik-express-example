@@ -1,76 +1,55 @@
-# Qwik App ⚡️
+# Deploy Qwik example to Layer0
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik Github](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+A demo deployment of Qwik app to Layer0.
 
----
+## Demo
 
-## Project Structure
+https://rishi-raj-jain-layer0-qwik-express-example-default.layer0-limelight.link
 
-Inside of you project, you'll see the following directories and files:
+## Try It Now
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+[![Deploy with Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/rishi-raj-jain/layer0-qwik-express-example)
 
-- `src/routes`: Provides the directory based routing, which can include a hierarchy of `layout.tsx` layout files, and `index.tsx` files as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+## Getting Started
 
-- `src/components`: Recommended directory for components.
+### Clone This Repo
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+Use `git clone https://github.com/rishi-raj-jain/layer0-qwik-express-example.git` to get the files within this repository onto your local machine.
 
-## Add Integrations
+### Install dependencies
 
-Use the `npm run qwik add` command to add other integrations. Some examples of integrations include as a Cloudflare, Netlify or Vercel server, and the Static Site Generator (SSG).
+On the command line, in the project root directory, run the following command:
 
-```
-npm run qwik add
+```bash
+npm install
 ```
 
-## Development
+### Run the Qwik app locally on Layer0
 
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules loaded by the browser.
+Run the Qwik app with the command:
 
-```
+```bash
 npm run dev
 ```
 
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
+Load the site: http://127.0.0.1:3000
 
-## Preview
+### Testing production build locally with Layer0
 
-The preview command will create a production build of the client modules, production build of `src/entry.preview.tsx`, and create a local server. The preview server is only for convenience to locally preview a production build, but it should not be used as a production server.
+You can do a production build of your app and test it locally using:
 
-```
-npm run preview
-```
-
-## Production
-
-The production build should generate the client and server modules by running both client and server build commands. Additionally, the build command will use Typescript run a type check on the source.
-
-```
-npm run build
+```bash
+npm run layer0:build && npm run layer0:production
 ```
 
-## Express Server
+Setting --production runs your app exactly as it will be uploaded to the Layer0 cloud using serverless-offline.
 
-This app has a minimal [Express server](https://expressjs.com/) implementation. After running a full build, you can preview the build using the command:
+## Deploying to Layer0
 
+Deploying requires an account on Layer0. [Sign up here for free](https://app.layer0.co/signup). Once you have an account, you can deploy to Layer0 by running the following in the root folder of your project:
+
+```bash
+npm run layer0:deploy
 ```
-npm run serve
-```
 
-Then visit [http://localhost:8080/](http://localhost:8080/)
+See [deploying](https://docs.layer0.co/guides/deploying) for more information.

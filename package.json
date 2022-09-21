@@ -4,6 +4,7 @@
     "layer0:dev": "layer0 dev",
     "layer0:build": "npm run build && layer0 build",
     "layer0:deploy": "layer0 deploy",
+    "layer0:production": "layer0 run --production",
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
